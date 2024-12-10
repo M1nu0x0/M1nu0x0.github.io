@@ -1,0 +1,96 @@
+name: Update repos_data.json
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # 매일 자정 실행
+  workflow_dispatch: # 수동 실행
+
+jobs:
+  update-json:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. 저장소 체크아웃
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      # 2. GitHub API에서 데이터 가져오기
+      - name: Fetch Repos Data
+        id: fetch-repos
+        run: |
+          curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+          https://api.github.com/users/${{ github.repository_owner }}/repos \
+          > repos.json
+
+      # 3. Generate repos_data.json
+      - name: Generate repos_data.json
+        id: generate-json
+        run: |
+          python3 <<EOF
+          import json
+          from datetime import datetime
+
+          # API 데이터 로드
+          with open("repos.json", "r") as f:
+              repos = json.load(f)
+
+          # GitHub Pages 레포지토리와 일반 레포지토리 분리
+          USERNAME = "${{ github.repository_owner }}"
+          pages_repos = [
+              {
+                  "name": repo["name"],
+                  "url": repo["html_url"],
+                  "description": repo["description"] or "No description",
+                  "last_updated": datetime.strptime(repo["updated_at"], "%Y-%m-%dT%H:%M:%SZ").strftime("%Y-%m-%d")
+              }
+              for repo in repos 
+              if repo.get("has_pages", False) and USERNAME.lower() not in repo["name"].lower()
+          ]
+
+          other_repos = [
+              {
+                  "name": repo["name"],
+                  "url": repo["html_url"],
+                  "description": repo["description"] or "No description",
+                  "language": repo["language"] or "Unknown",
+                  "forks": repo["forks_count"],
+                  "stars": repo["stargazers_count"]
+              }
+              for repo in repos 
+              if not repo.get("has_pages", False) and USERNAME.lower() not in repo["name"].lower()
+          ]
+
+          # JSON 데이터 생성
+          data = {
+              "pages": pages_repos,
+              "repos": other_repos
+          }
+
+          # 기존 데이터와 비교
+          try:
+              with open("docs/.vuepress/public/repos_data.json", "r", encoding="utf-8") as f:
+                  existing_data = json.load(f)
+          except FileNotFoundError:
+              existing_data = None
+
+          # 변경이 있으면 파일 업데이트
+          if data != existing_data:
+              with open("docs/.vuepress/public/repos_data.json", "w", encoding="utf-8") as f:
+                  json.dump(data, f, indent=4, ensure_ascii=False)
+          else:
+              print("No changes detected in repos_data.json")
+          EOF
+
+      # 4. 변경 사항 커밋
+      - name: Commit Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/.vuepress/public/repos_data.json
+
+          # 변경 사항이 없으면 커밋하지 않음
+          if ! git diff --cached --quiet; then
+            git commit -m "Update repos_data.json"
+            git push
+          else
+            echo "No changes detected. Skipping commit."
