@@ -1,0 +1,225 @@
+# =========================
+# Custom Global Ignores
+# =========================
+
+
+# =========================
+# Custom Global Ignores
+# =========================
+
+# VuePress default temp directory
+docs/.vuepress/.temp
+
+# VuePress default cache directory
+docs/.vuepress/.cache
+
+# VuePress default build output directory
+docs/.vuepress/dist
+
+# =========================
+# Node.js Specific
+# =========================
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Diagnostic reports
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Instrumented libs
+lib-cov
+
+# Coverage directories
+coverage
+*.lcov
+.nyc_output
+
+# Grunt, Bower, and node-waf
+.grunt
+bower_components
+.lock-wscript
+
+# Compiled binary addons
+build/Release
+
+# Dependency directories
+node_modules/
+jspm_packages/
+web_modules/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional caches
+.npm
+.eslintcache
+.stylelintcache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+.node_repl_history
+
+# Output from 'npm pack'
+*.tgz
+
+# Yarn files
+.yarn-integrity
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# Environment files
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# Framework-specific outputs
+.cache
+.parcel-cache
+.next
+out
+.nuxt
+dist
+.vuepress/dist
+.temp
+.docusaurus
+
+# Serverless and DynamoDB
+.serverless/
+.dynamodb/
+
+# Others
+.fusebox/
+.tern-port
+.vscode-test
+
+
+# =========================
+# Python Specific
+# =========================
+
+# Byte-compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Packaging files
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+MANIFEST
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Test and coverage files
+htmlcov/
+.tox/
+.nox/
+.coverage
+.cache
+.pytest_cache/
+.hypothesis/
+
+# Environment files
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Django and Flask
+*.log
+local_settings.py
+db.sqlite3
+instance/
+.webassets-cache
+
+# Jupyter and IPython
+.ipynb_checkpoints
+profile_default/
+ipython_config.py
+
+# IDE-specific
+.spyderproject
+.spyproject
+.ropeproject
+
+# Build systems
+.pybuilder/
+target/
+
+# Type checking and analysis
+.mypy_cache/
+.dmypy.json
+.pyre/
+.pytype/
+cython_debug/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Documentation tools
+docs/_build/
+.site
+
+
+# =========================
+# Global/General Purpose
+# =========================
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# System-specific files
+.DS_Store
+.Trashes
+*.ini
+desktop.ini
+Thumbs.db
+
+# IDEs and Editors
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Dependency caches
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+*.lock
