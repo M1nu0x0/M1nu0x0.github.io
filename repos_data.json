@@ -1,0 +1,52 @@
+{
+    "pages": [
+        {
+            "name": "python",
+            "url": "https://github.com/M1nu0x0/python",
+            "description": "\ud30c\uc774\uc36c \uace0\uc218\uac00 \ub418\uae30 \uc704\ud55c \uc5ec\uc815",
+            "last_updated": "2024-12-10"
+        }
+    ],
+    "repos": [
+        {
+            "name": "2024_1st_java_study",
+            "url": "https://github.com/M1nu0x0/2024_1st_java_study",
+            "description": "2024\ub144 1\ud559\uae30 \uc790\ubc14 \uc2a4\ud130\ub514 \ub808\ud3ec\uc9c0\ud1a0\ub9ac",
+            "language": "Java",
+            "forks": 0,
+            "stars": 0
+        },
+        {
+            "name": "2024_2nd_java_study",
+            "url": "https://github.com/M1nu0x0/2024_2nd_java_study",
+            "description": "2024\ub144 2\ud559\uae30 \uc790\ubc14 \uc2a4\ud130\ub514 \ub808\ud3ec\uc9c0\ud1a0\ub9ac",
+            "language": "Java",
+            "forks": 0,
+            "stars": 0
+        },
+        {
+            "name": "ant_monitoring_system",
+            "url": "https://github.com/M1nu0x0/ant_monitoring_system",
+            "description": "\uac1c\ubbf8 \ud0a4\uc6b0\uae30 + \uc544\ub450\uc774\ub178 \uae30\ucd08\uc124\uacc4 \uacfc\uc81c",
+            "language": "JavaScript",
+            "forks": 0,
+            "stars": 0
+        },
+        {
+            "name": "discord_gpt",
+            "url": "https://github.com/M1nu0x0/discord_gpt",
+            "description": "No description",
+            "language": "Unknown",
+            "forks": 0,
+            "stars": 0
+        },
+        {
+            "name": "engine0x0",
+            "url": "https://github.com/M1nu0x0/engine0x0",
+            "description": "No description",
+            "language": "Python",
+            "forks": 0,
+            "stars": 0
+        }
+    ]
+}
