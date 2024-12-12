@@ -39,7 +39,8 @@ jobs:
           pages_repos = [
               {
                   "name": repo["name"],
-                  "url": repo["html_url"],
+                  # "url": repo["html_url"],
+                  "url": f"https://{USERNAME}.github.io/{repo['name']}/",
                   "description": repo["description"] or "No description",
                   "last_updated": datetime.strptime(repo["updated_at"], "%Y-%m-%dT%H:%M:%SZ").strftime("%Y-%m-%d")
               }
@@ -89,8 +90,9 @@ jobs:
           git add docs/.vuepress/public/repos_data.json
 
           # 변경 사항이 없으면 커밋하지 않음
-          if ! git diff --cached --quiet; then
+          if git diff --cached --quiet; then
+            echo "No changes detected. Skipping commit."
+          else
             git commit -m "Update repos_data.json"
             git push
-          else
-            echo "No changes detected. Skipping commit."
+          fi
