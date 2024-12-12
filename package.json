@@ -14,9 +14,11 @@
     "@vuepress/bundler-vite": "^2.0.0-rc.18",
     "@vuepress/plugin-register-components": "2.0.0-rc.54",
     "@vuepress/theme-default": "^2.0.0-rc.65",
+    "katex": "^0.16.15",
     "sass-embedded": "^1.82.0",
     "vue": "^3.4.0",
-    "vuepress": "^2.0.0-rc.18"
+    "vuepress": "^2.0.0-rc.18",
+    "vuepress-theme-hope": "^2.0.0-rc.63"
   },
   "main": "index.js",
   "directories": {

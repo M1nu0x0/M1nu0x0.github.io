@@ -1,8 +1,9 @@
-import { defineClientConfig } from '@vuepress/client';
-import ReposTable from './components/ReposTable.vue';
+// import { defineClientConfig } from '@vuepress/client';
 
-export default defineClientConfig({
-  enhance({ app }) {
-    app.component('ReposTable', ReposTable);
-  },
-});
+// import Cards from './components/Cards.vue';
+
+// export default defineClientConfig({
+//   enhance({ app }) {
+//     app.component('Cards', Cards);
+//   },
+// });
