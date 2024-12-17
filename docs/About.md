@@ -1,8 +1,11 @@
 ---
 home: true
+article: true
+star: 1
 date: 2024-12-10
-autor: M1nu0x0
+author: M1nu0x0
 title: About
+tagline: 삐약이 개발자의 About
 ---
 
 ## Hi there 👋

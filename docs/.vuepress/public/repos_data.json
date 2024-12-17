@@ -1,12 +1,4 @@
 {
-    "pages": [
-        {
-            "name": "python",
-            "url": "https://github.com/M1nu0x0/python",
-            "description": "\ud30c\uc774\uc36c \uace0\uc218\uac00 \ub418\uae30 \uc704\ud55c \uc5ec\uc815",
-            "last_updated": "2024-12-10"
-        }
-    ],
     "repos": [
         {
             "name": "2024_1st_java_study",
@@ -41,10 +33,10 @@
             "stars": 0
         },
         {
-            "name": "engine0x0",
-            "url": "https://github.com/M1nu0x0/engine0x0",
-            "description": "No description",
-            "language": "Python",
+            "name": "Ult_Generator",
+            "url": "https://github.com/M1nu0x0/Ult_Generator",
+            "description": "\uad81\uadf9\uae30 \uc0dd\uc131\uae30",
+            "language": "Unknown",
             "forks": 0,
             "stars": 0
         }

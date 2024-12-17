@@ -1,4 +1,20 @@
 <template>
+  <div>
+    <!-- 정렬 버튼 -->
+     <div class="sort-select">
+      <label for="sort-option">Sort by: </label>
+      <select v-model="selectedSortOption" @change="applySort">
+        <option value="stars-desc">Stars ↓</option>
+        <option value="stars-asc">Stars ↑</option>
+        <option value="forks-desc">Forks ↓</option>
+        <option value="forks-asc">Forks ↑</option>
+        <option value="name-desc">Name ↓</option>
+        <option value="name-asc">Name ↑</option>
+      </select>
+     </div>
+  </div>
+  
+  <!-- 카드 렌더링 -->
   <div class="card-container">
     <div v-for="data in datas" :key="data.name" class="card">
       <div v-if="data.header && data.header.trim()" class="card-header">
@@ -9,7 +25,7 @@
           {{ data.language || 'docs' }}
         </div>
         <div class="card-title">
-          <a :href="data.url" target="_blank" class="text-blue-500 font-bold hover:underline">
+          <a :href="data.url" class="text-blue-500 font-bold hover:underline">
             {{ data.name }}
           </a>
         </div>
@@ -37,7 +53,20 @@ export default defineComponent ({
   data() {
     return {
       datas: [],
+      selectedSortOption: "stars-desc", // 기본 정렬 옵션
     };
+  },
+  methods: {
+    applySort() {
+      const [sortKey, sortOrder] = this.selectedSortOption.split("-");
+      this.datas.sort((a, b) => {
+        if (sortKey === "name") {
+          return sortOrder === "asc" ? a[sortKey].localeCompare(b[sortKey]) : b[sortKey].localeCompare(a[sortKey]);
+        } else {
+          return sortOrder === "asc" ? a[sortKey] - b[sortKey] : b[sortKey] - a[sortKey];
+        }
+      });
+    },
   },
   async mounted() {
     try {
@@ -50,6 +79,7 @@ export default defineComponent ({
       } else {
         this.datas = [];
       }
+      this.applySort();
     } catch (error) {
       console.error("Failed to load repos_data.json:", error);
     }
