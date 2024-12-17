@@ -36,17 +36,6 @@ jobs:
 
           # GitHub Pages 레포지토리와 일반 레포지토리 분리
           USERNAME = "${{ github.repository_owner }}"
-          pages_repos = [
-              {
-                  "name": repo["name"],
-                  # "url": repo["html_url"],
-                  "url": f"https://{USERNAME}.github.io/{repo['name']}/",
-                  "description": repo["description"] or "No description",
-                  "last_updated": datetime.strptime(repo["updated_at"], "%Y-%m-%dT%H:%M:%SZ").strftime("%Y-%m-%d")
-              }
-              for repo in repos 
-              if repo.get("has_pages", False) and USERNAME.lower() not in repo["name"].lower()
-          ]
 
           other_repos = [
               {
@@ -63,7 +52,6 @@ jobs:
 
           # JSON 데이터 생성
           data = {
-              "pages": pages_repos,
               "repos": other_repos
           }
 
