@@ -2,10 +2,9 @@ name: Deploy Docs
 
 on:
   push:
-    paths:
-      - 'docs/.vuepress/public/repos_data.json'
     branches:
       - main
+  workflow_dispatch:
 
 permissions:
   contents: write
