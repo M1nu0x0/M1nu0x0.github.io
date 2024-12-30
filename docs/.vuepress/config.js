@@ -18,7 +18,6 @@ export default defineUserConfig({
     plugins: {
       blog: true,
     },
-    sidebar,
     blog: {
       name: 'M1nu0x0',
       description: '삐약이 개발자의 블로그',
@@ -47,8 +46,10 @@ export default defineUserConfig({
       { text: 'Repos', link: '/Repos' },
       { text: 'About', link: '/About' },
     ],
-
+    sidebar,
     sidebarDepth: 1,
+    sidebarAutoCollapse: true,
+
     darkMode: 'toggle',
     backToTop: true,
     removeHtmlExtension: true,
@@ -65,7 +66,6 @@ export default defineUserConfig({
         exclude: ['/404.html'],
       },
     ],
-    '@vuepress/back-to-top',
   ],
 
   bundler: viteBundler(),

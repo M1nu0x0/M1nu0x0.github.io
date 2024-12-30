@@ -2,14 +2,17 @@ export const sidebar = {
     '/': [
         {
             text: 'Pytorch',
+            collapsable: true,
             children: []
         },
         {
             text: 'Environment',
+            collapsable: true,
             children: []
         },
         {
             text: 'Python',
+            collapsable: true,
             children: [
                 '/posts/Languages/Python/01. Python 소개와 기본.md',
                 '/posts/Languages/Python/02. Python 기본 문법.md',
@@ -25,12 +28,14 @@ export const sidebar = {
         },
         {
             text: 'C++',
+            collapsable: true,
             children: [
                 '/posts/Languages/Cpp/01. c++ 소개와 기본.md',
             ]
         },
         {
             text: 'Java',
+            collapsable: true,
             children: []
         },
     ]
