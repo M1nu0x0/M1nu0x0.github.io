@@ -1,5 +1,4 @@
-
-name: Deploy Docs with BLUE-GREEN Deployment
+name: Deploy Docs
 
 on:
   push:
@@ -39,30 +38,9 @@ jobs:
           npm run docs:build
           > docs/.vuepress/dist/.nojekyll
 
-      # Staging Deployment
-      - name: Move Build to Staging
-        run: mv docs/.vuepress/dist staging
-
-      # Validate the build
-      - name: Validate Staging
-        run: |
-          if [ -d "staging" ]; then
-            echo "Staging build successful"
-          else
-            echo "Staging build failed"
-            exit 1
-          fi
-
-      # Production Deployment
-      - name: Move Build to Production
-        run: |
-          mv prodictoin backup || true
-          mv staging production
-
-      # Deploy to GitHub Pages
       - name: Deploy Docs
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           # This is the branch where the docs are deployed to
           branch: gh-pages
-          folder: production
+          folder: docs/.vuepress/dist
