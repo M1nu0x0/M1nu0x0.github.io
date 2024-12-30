@@ -2,6 +2,7 @@ import { defineUserConfig } from 'vuepress/cli'
 import { viteBundler } from '@vuepress/bundler-vite'
 import { getDirname, path } from '@vuepress/utils';
 import { registerComponentsPlugin } from '@vuepress/plugin-register-components';
+import { removeHtmlExtensionPlugin } from 'vuepress-plugin-remove-html-extension';
 import { hopeTheme } from 'vuepress-theme-hope';
 import { sidebar } from './sidebarConfig';
 
@@ -47,18 +48,18 @@ export default defineUserConfig({
       { text: 'About', link: '/About' },
     ],
     sidebar,
-    sidebarDepth: 1,
+    sidebarDepth: 2,
     sidebarAutoCollapse: true,
 
     darkMode: 'toggle',
     backToTop: true,
-    removeHtmlExtension: true,
   }),
 
   plugins: [
     registerComponentsPlugin({
       componentsDir: path.resolve(__dirname, './components'),
     }),
+    removeHtmlExtensionPlugin(),
     [
       'sitemap',
       {
