@@ -12,7 +12,11 @@ export const sidebar = {
         {
           text: "Linux",
           collapsible: true,
-          children: ["/posts/Environments/Linux/brew.md"],
+          children: [
+            "/posts/Environments/Linux/brew.md",
+            "/posts/Environments/Linux/ohmyzsh.md",
+            "/posts/Environments/Linux/lsd.md",
+          ],
         },
         {
           text: "Python",
