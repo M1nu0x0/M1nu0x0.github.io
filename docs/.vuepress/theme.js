@@ -32,7 +32,8 @@ export default hopeTheme({
     math: {
       type: "katex",
     },
-    lineNumbers: true,
+    lineNumbers: false,
+    codeTabs: true,
   },
 
   navbar: [

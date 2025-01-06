@@ -10,6 +10,11 @@ export const sidebar = {
       collapsible: true,
       children: [
         {
+          text: "Linux",
+          collapsible: true,
+          children: ["/posts/Environments/Linux/brew.md"],
+        },
+        {
           text: "Python",
           collapsible: true,
           children: ["/posts/Environments/Python/anaconda.md"],
