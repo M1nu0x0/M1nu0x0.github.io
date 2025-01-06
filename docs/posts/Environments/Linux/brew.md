@@ -6,31 +6,32 @@ category:
   - Environments
 tag:
   - Linux
+  - Ubuntu 24.04
   - Homebrew
   - gcc
 ---
-# Linux에서 brew를
+# brew 설치 가이드
 
 ## Homebrew란?
 맥스 호웰이 개발한 맥OS용 패키지 관리자.
 
 ## Homebrew 설치
 ::: code-tabs#shell
-@tab bash
+@tab apt
 ```bash
 sudo apt update && sudo apt upgrade -y
 ```
 :::
 curl을 이용하여 설치를 할 것이니, 우선 curl을 다운 받도록 하자.
 ::: code-tabs#shell
-@tab bash
+@tab apt
 ``` bash
 sudo apt install curl -y
 ```
 :::
 curl을 이용하여 아래 script를 다운받고 실행하자.
 ::: code-tabs#shell
-@tab bash
+@tab Bash
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
@@ -75,8 +76,8 @@ Warning: /home/linuxbrew/.linuxbrew/bin is not in your PATH.
 ```bash {1-5,7}
 ==> Next steps:
 - Run these commands in your terminal to add Homebrew to your PATH:
-    echo >> /home/aisl/.bashrc
-    echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/aisl/.bashrc
+    echo >> /home/user-name/.bashrc
+    echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/user-name/.bashrc
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 - Install Homebrew's dependencies if you have sudo access:
     sudo apt-get install build-essential
@@ -90,26 +91,26 @@ Warning: /home/linuxbrew/.linuxbrew/bin is not in your PATH.
 ```
 `Next steps:`를 참조하여 PATH 설정을 해주자.
 ::: code-tabs#shell
-@tab bash
+@tab Bash
 ```bash
-echo >> /home/aisl/.bashrc
+echo >> /home/user-name/.bashrc
 ```
 :::
 ::: code-tabs#shell
-@tab bash
+@tab Bash
 ```bash
-echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/aisl/.bashrc
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/user-name/.bashrc
 ```
 :::
 ::: code-tabs#shell
-@tab bash
+@tab Bash
 ```bash
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 ```
 :::
 sudo 권한이 있다면 Homebrew의 의존성을 설치해달라고 한다.
 ::: code-tabs#shell
-@tab bash
+@tab apt-get
 ```bash
 sudo apt-get install build-essential
 ```
@@ -117,7 +118,7 @@ sudo apt-get install build-essential
 
 ## Homebrew 확인
 ::: code-tabs#shell
-@tab bash
+@tab brew
 ```bash
 brew --version
 ```
@@ -127,7 +128,7 @@ Homebrew 4.4.14
 ```
 or
 ::: code-tabs#shell
-@tab bash
+@tab brew
 ``` bash
 brew doctor
 ```
@@ -138,7 +139,7 @@ Your system is ready to brew.
 
 ## Homebrew 업데이트
 ::: code-tabs#shell
-@tab bash
+@tab brew
 ``` bash
 brew udpate
 ```
@@ -150,18 +151,18 @@ Already up-to-date.
 
 ## Homebrew 삭제
 ::: code-tabs#shell
-@tab bash
+@tab Bash
 ```bash
 curl -fsSL -o uninstall.sh https://raw.githubusercontent.com/Homebrew/install/master/uninstall.sh
 ```
 :::
 ::: code-tabs#shell
-@tab bash
+@tab Bash
 ```bash
 bash uninstall.sh
 ```
 :::
-이후 ~/.bashrc 하단에 내용을 지우면 된다.
+이후 ~/.bashrc 하단 내용을 지우면 된다.
 ```bash {3}
 ...
 
@@ -175,14 +176,14 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 ```
 명령어 추천으로 GCC 설치를 해보라고 한다.
 ::: code-tabs#shell
-@tab bash
+@tab brew
 ```bash
 brew install gcc
 ```
 :::
 설치가 다 되면 확인해보자.
 ::: code-tabs#shell
-@tab bash
+@tab Bash
 ```bash
 gcc --version
 ```
@@ -197,7 +198,7 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 ## brew Upgrade test
 gcc를 업그레이드 해보자.
 ::: code-tabs#shell
-@tab bash
+@tab brew
 ```bash
 brew upgrade gcc
 ```
@@ -209,7 +210,7 @@ Warning: gcc 14.2.0_1 already installed
 ## brew Uninstall test
 gcc를 삭제해보자.
 ::: code-tabs#shell
-@tab bash
+@tab brew
 ```bash
 brew uninstall gcc
 ```
