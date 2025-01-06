@@ -6,7 +6,7 @@ category:
   - Environments
 tag:
   - Linux
-  - Brew
+  - Homebrew
   - gcc
 ---
 # Linux에서 brew를
