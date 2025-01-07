@@ -7,3 +7,13 @@
 //     app.component('Cards', Cards);
 //   },
 // });
+
+// export default ({ router }) => {
+//   router.beforeEach((to, from, next) => {
+//     if (to.path === '/posts') {
+//       next({ path: '/' })
+//     } else {
+//       next()
+//     }
+//   })
+// }
