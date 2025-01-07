@@ -1,7 +1,7 @@
 ---
 title: lsd 설치 가이드
 date: 2025-01-06
-cover: /posts/Environments/Linux/lsd/thumbnail.png
+cover: /posts/Environments/Linux/lsd/thumbnail.jpg
 category:
   - Environments
 tag:

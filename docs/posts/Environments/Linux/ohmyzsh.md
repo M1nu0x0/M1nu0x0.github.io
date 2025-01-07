@@ -1,7 +1,7 @@
 ---
 title: oh my zsh 설치 가이드
 date: 2025-01-06
-cover: /posts/Environments/Linux/ohmyzsh/thumbnail.png
+cover: /posts/Environments/Linux/ohmyzsh/thumbnail.jpg
 category:
   - Environments
 tag:
