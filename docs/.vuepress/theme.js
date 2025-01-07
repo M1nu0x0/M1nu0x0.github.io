@@ -38,7 +38,6 @@ export default hopeTheme({
 
   navbar: [
     { text: "Home", link: "/" },
-    { text: "Posts", link: "/Posts" },
     { text: "Repos", link: "/Repos" },
     { text: "About", link: "/About" },
   ],
