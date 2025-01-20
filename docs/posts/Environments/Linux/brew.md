@@ -26,7 +26,7 @@ curl을 이용하여 설치를 할 것이니, 우선 curl을 다운 받도록 �
 ::: code-tabs#shell
 @tab apt
 ``` bash
-sudo apt install curl -y
+sudo apt install curl -y && sudo apt install git -y
 ```
 :::
 curl을 이용하여 아래 script를 다운받고 실행하자.
