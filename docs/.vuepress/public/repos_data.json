@@ -23,6 +23,14 @@
             "language": "Unknown",
             "forks": 0,
             "stars": 0
+        },
+        {
+            "name": "SelfPose3d",
+            "url": "https://github.com/M1nu0x0/SelfPose3d",
+            "description": "fork code for \"SelfPose3d: Self-Supervised Multi-Person Multi-View 3d Pose Estimation\"",
+            "language": "Unknown",
+            "forks": 0,
+            "stars": 0
         }
     ]
 }
