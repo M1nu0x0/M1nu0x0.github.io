@@ -25,6 +25,14 @@
             "stars": 0
         },
         {
+            "name": "Faster-VoxelPose",
+            "url": "https://github.com/M1nu0x0/Faster-VoxelPose",
+            "description": "Official implementation of Faster VoxelPose: Real-time 3D Human Pose Estimation by Orthographic Projection",
+            "language": "Unknown",
+            "forks": 0,
+            "stars": 0
+        },
+        {
             "name": "multiview_pose",
             "url": "https://github.com/M1nu0x0/multiview_pose",
             "description": "PRGN - [ICCV2021] Code Release of Graph-Based 3D Multi-Person Pose Estimation Using Multi-View Images",
@@ -41,9 +49,25 @@
             "stars": 0
         },
         {
+            "name": "PlaneSweepPose",
+            "url": "https://github.com/M1nu0x0/PlaneSweepPose",
+            "description": "Code for \"Multi-View Multi-Person 3D Pose Estimation with Plane Sweep Stereo\"",
+            "language": "Unknown",
+            "forks": 0,
+            "stars": 0
+        },
+        {
             "name": "SelfPose3d",
             "url": "https://github.com/M1nu0x0/SelfPose3d",
             "description": "fork code for \"SelfPose3d: Self-Supervised Multi-Person Multi-View 3d Pose Estimation\"",
+            "language": "Unknown",
+            "forks": 0,
+            "stars": 0
+        },
+        {
+            "name": "voxelpose-pytorch",
+            "url": "https://github.com/M1nu0x0/voxelpose-pytorch",
+            "description": "Official implementation of \"VoxelPose: Towards Multi-Camera 3D Human Pose Estimation in Wild Environment\"",
             "language": "Unknown",
             "forks": 0,
             "stars": 0
