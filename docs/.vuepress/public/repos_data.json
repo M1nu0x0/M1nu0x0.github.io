@@ -17,6 +17,14 @@
             "stars": 0
         },
         {
+            "name": "compute_latex",
+            "url": "https://github.com/M1nu0x0/compute_latex",
+            "description": "No description",
+            "language": "Rust",
+            "forks": 0,
+            "stars": 0
+        },
+        {
             "name": "discord_gpt",
             "url": "https://github.com/M1nu0x0/discord_gpt",
             "description": "No description",
