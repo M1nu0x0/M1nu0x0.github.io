@@ -17,6 +17,14 @@
             "stars": 0
         },
         {
+            "name": "AI_bench_rust",
+            "url": "https://github.com/M1nu0x0/AI_bench_rust",
+            "description": "Benchmark for rust AI Execute providers.",
+            "language": "Unknown",
+            "forks": 0,
+            "stars": 0
+        },
+        {
             "name": "compute_latex",
             "url": "https://github.com/M1nu0x0/compute_latex",
             "description": "No description",
