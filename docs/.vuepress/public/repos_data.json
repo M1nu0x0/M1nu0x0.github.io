@@ -65,6 +65,14 @@
             "stars": 0
         },
         {
+            "name": "NNLab",
+            "url": "https://github.com/M1nu0x0/NNLab",
+            "description": "No description",
+            "language": "Unknown",
+            "forks": 0,
+            "stars": 0
+        },
+        {
             "name": "PlaneSweepPose",
             "url": "https://github.com/M1nu0x0/PlaneSweepPose",
             "description": "Code for \"Multi-View Multi-Person 3D Pose Estimation with Plane Sweep Stereo\"",
