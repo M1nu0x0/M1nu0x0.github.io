@@ -71,14 +71,6 @@
             "language": "Unknown",
             "forks": 0,
             "stars": 0
-        },
-        {
-            "name": "vsr",
-            "url": "https://github.com/M1nu0x0/vsr",
-            "description": "video super resolution",
-            "language": "MDX",
-            "forks": 0,
-            "stars": 0
         }
     ]
 }
