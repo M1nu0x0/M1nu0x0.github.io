@@ -71,7 +71,8 @@ export default defineComponent ({
   },
   async mounted() {
     try {
-      const response = await fetch("/repos_data.json");
+      // Use a relative URL so the component works regardless of the site's base URL
+      const response = await fetch("./repos_data.json");
       const data = await response.json();
       if (this.category === "pages") {
         this.datas = data.pages || [];
