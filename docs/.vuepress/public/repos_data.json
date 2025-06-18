@@ -17,6 +17,14 @@
             "stars": 0
         },
         {
+            "name": "burn",
+            "url": "https://github.com/M1nu0x0/burn",
+            "description": "Burn is a next generation Deep Learning Framework that doesn't compromise on flexibility, efficiency and portability.",
+            "language": "Unknown",
+            "forks": 0,
+            "stars": 0
+        },
+        {
             "name": "discord_gpt",
             "url": "https://github.com/M1nu0x0/discord_gpt",
             "description": "No description",
